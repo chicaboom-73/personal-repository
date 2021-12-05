@@ -1,9 +1,8 @@
 html{
     background-color: #D95FA2;
     font-family: 'Roboto mono', monospace;
+    font-size: 16px;
 }
-
-
 
 /* navigation */
 .container{
@@ -48,7 +47,7 @@ nav a{
     font-weight: 400;
 }
 nav a:hover{
-    color:blue;
+    color:#f2cda0;
 
 }
 nav a::before{
@@ -56,7 +55,7 @@ nav a::before{
     display: block;
     height: 5px;
     width: 100%;
-    background-color: crimson;
+    background-color: #242259;
     position: absolute;
     top: 0;
     width: 0%;
@@ -65,65 +64,102 @@ nav a::before{
 nav a:hover::before{
     width: 100%;
 }
-/* Grid style - Main Page*/
+/* Grid style - Main Area */
+
 .main-container{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-auto-rows: minmax(100px, auto);
     width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: minmax(auto, 100%);
     margin-left: auto;
     margin-right: auto;
 }
 .hero-title{
-    grid-column: 1/4;
-    grid-row: 1/3;
+    grid-column: 1/3;
+    grid-row: 1;
     text-align: center;
+    color: white;
     font-size: 2.5rem;
     padding-top: 1.7em;
-    color: white;
+   
 
 }
+/*Designbot Styling*/
+
 .container-left{
     grid-column: 1/2;
-    grid-row: 1/2;
-    
+    grid-row:1/2;
     color: white;
     margin-top: -25px;
 }
 .container-left h4{
-    font-size: 1.2em;
-
+    font-size: 1.1rem;
 }
 .container-left p{
+    margin-top: -8px;
     font-size: .8em;
     font-weight: 400;
-    line-height: 1em;
+    line-height: 1.4rem;
 }
+/* Grid style - Main Page*/
+
 .container-right{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(100px, auto);
-    width: 70%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
-}
-
-.contact-form{
-    grid-column: 2/3;
-    grid-row: 1/2;
+    line-height: 1.5rem;
     color: #242259;
-    font-size: 1em;
-    background-color: #ecafd1;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    border: #242259 solid 2px;
-
+}
+.form{
+    grid-column: 1/2;
+    
+}
+.map{
+    grid-column: 2/3;
+    width: 150%;
 }
 
-.map iframe{
-    grid-column: 1/2;
-    grid-row: 1/4;
-    width: 98%;
-    height: 100%;
-    
+.checkbox{
+    margin-bottom: 30px;
+}
+td{
+    font-size: 1.1rem;
+}
+tr{
+    line-height: 1.5rem;
+}
+.form-bottom{
+    font-size: 1rem;
+}
+.form-bottom h4{
+    font-size: 1.1rem;
+}
+label[for=service1]{
+    font-size: 1.1rem;
+}
+label[for=service2]{
+    font-size: 1.1rem;
+}
+label[for=fname]{
+    font-size: 1.1rem;
+}
+label[for=lname]{
+    font-size: 1.1rem;
+}
+label[for=message]{
+    font-size: 1.1rem;
+}
+input[type=submit]{
+    background-color: #242259;
+    border:none;
+    color: #D95FA2;
+    font-size: 1.1rem;
+    padding: 16px 32px;
+    text-decoration: none;
+
+
+
 }

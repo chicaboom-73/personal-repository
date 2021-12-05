@@ -1,9 +1,8 @@
 html{
     background-color: #D95FA2;
     font-family: 'Roboto mono', monospace;
+    font-size: 16px;
 }
-
-
 
 /* navigation */
 .container{
@@ -48,7 +47,7 @@ nav a{
     font-weight: 400;
 }
 nav a:hover{
-    color:blue;
+    color:#f2cda0;
 
 }
 nav a::before{
@@ -56,7 +55,7 @@ nav a::before{
     display: block;
     height: 5px;
     width: 100%;
-    background-color: crimson;
+    background-color: #242259;
     position: absolute;
     top: 0;
     width: 0%;
@@ -65,72 +64,122 @@ nav a::before{
 nav a:hover::before{
     width: 100%;
 }
-/* Grid style - Main Page*/
+/* Grid style - Main Area */
 
 .main-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: minmax(100px, auto);
     width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: minmax(auto, 100%);
     margin-left: auto;
     margin-right: auto;
 }
 .hero-title{
-    grid-column: 1/4;
-    grid-row: 1/3;
+    grid-column: 1/3;
+    grid-row: 1;
     text-align: center;
+    color: white;
     font-size: 2.5rem;
     padding-top: 1.7em;
-    color: white;
+   
 
 }
+/*Designbot Styling*/
+
 .container-left{
     grid-column: 1/2;
-    grid-row: 1/2;
-    
+    grid-row:1/2;
     color: white;
     margin-top: -25px;
 }
 .container-left h4{
-    font-size: 1.2em;
-
+    font-size: 1.1rem;
 }
 .container-left p{
-    font-size: .8rem;
+    margin-top: -8px;
+    font-size: .8em;
     font-weight: 400;
-    line-height: 1rem;
+    line-height: 1.4rem;
 }
+/* Main page area*/
 .container-right{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(100px, auto);
-    max-width: 70%;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;   
-    padding-right: 10em;
-    padding-left: 10em;
+    padding-right: 10rem;
+    padding-left: 10rem;
 }
+.about-image{
+    grid-column: 1;
+    grid-row: 1;
+    
+}
+
 .illustration{
     grid-column: 1;
     grid-row: 1;
-    width: 70%;
+    width: 65%;
     border-radius: 50%;
-    margin-left: 6em;
+    margin-left: 6rem;
+    margin: auto;
+    margin: auto;
+    
 
 }
 .paragraph p{
     color: white;
-    font-size: 1.2em;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 300;
     text-align: justify;
+    line-height: 1.6rem;
     
 }
 .paragraph{
+    width: 60%;
     grid-column: 2;
     grid-row: 1;
     
-    margin-right: 6em;
-    
-   
+    margin-right: 6em;   
 }
 
+.border{
+    position:relative;
+  }
+  .border:before{
+    content:"";
+    z-index:-1;
+    left:-0.5rem;
+    top:-0.1rem;
+    border-width:2px;
+    border-style:solid;
+    border-color:#242259;
+    position:absolute;
+    border-right-color:transparent;
+    width:100%;
+    height:1.2rem;
+    transform:rotate(2deg);
+    opacity:0.7;
+    border-radius:50%;
+    padding:0.1rem 0.25rem;
+  }
+  .border:after{
+    content:"";
+    z-index:-1;
+    left:-0.5rem;
+    top:0.1rem;
+    padding:0.1rem 0.25rem;
+    border-width:2px;
+    border-style:solid;
+    border-color:#242259;
+    border-left-color:transparent;
+    border-top-color:transparent;
+    position:absolute;
+    width:100%;
+    height:1.2rem;
+    transform:rotate(-1deg);
+    opacity:0.7;
+    border-radius:50%;
+  }
